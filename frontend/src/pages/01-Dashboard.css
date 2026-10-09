@@ -1,0 +1,620 @@
+.dashboard {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  background:
+    radial-gradient(
+      circle at 65% 20%,
+      rgba(94, 82, 139, 0.12),
+      transparent 35%
+    ),
+    #0d1627;
+  color: #ffffff;
+}
+/* メイン画面 */
+.dashboard-main {
+  flex: 1;
+  min-width: 0;
+  padding: 27px 29px 22px;
+}
+/* ヘッダー */
+.dashboard-header {
+  min-height: 74px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 25px;
+}
+.dashboard-greeting h1 {
+  margin: 0;
+  color: #ffffff;
+  font-size: 34px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+.dashboard-greeting p {
+  margin: 8px 0 0;
+  color: #a9b1c6;
+  font-size: 14px;
+}
+.dashboard-header-right {
+  display: flex;
+  align-items: center;
+  gap: 57px;
+}
+.dashboard-connection {
+  margin-top: 1px;
+  padding: 10px 17px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  border: 1px solid #28364c;
+  border-radius: 12px;
+  background: rgba(13, 22, 39, 0.6);
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 700;
+}
+.dashboard-online-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #40e4c3;
+  box-shadow:
+    0 0 10px rgba(64, 228, 195, 0.85);
+}
+.dashboard-clock {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+}
+.dashboard-clock span {
+  color: #c6ccda;
+  font-size: 10px;
+}
+.dashboard-clock strong {
+  font-size: 29px;
+  line-height: 1;
+}
+/* 共通カード */
+.dashboard-card {
+  border: 1px solid #313b50;
+  border-radius: 15px;
+  background:
+    linear-gradient(
+      135deg,
+      rgba(32, 42, 64, 0.97),
+      rgba(29, 36, 55, 0.97)
+    );
+  box-shadow:
+    0 12px 30px rgba(0, 0, 0, 0.12);
+  overflow: hidden;
+}
+/* 上部3カード */
+.dashboard-top-grid {
+  margin-bottom: 16px;
+  display: grid;
+  grid-template-columns: 1.25fr 1.14fr 1.03fr;
+  gap: 14px;
+}
+.dashboard-top-grid .dashboard-card {
+  height: 137px;
+}
+/* 集中状態 */
+.dashboard-focus-card {
+  padding: 23px 21px;
+  display: flex;
+  align-items: center;
+  gap: 21px;
+  background:
+    linear-gradient(
+      120deg,
+      rgba(19, 62, 67, 0.95),
+      rgba(26, 48, 62, 0.95)
+    );
+}
+.dashboard-focus-icon {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border: 5px solid #43e4c4;
+  border-radius: 50%;
+  color: #43e4c4;
+  font-size: 25px;
+}
+.dashboard-focus-content {
+  display: flex;
+  flex-direction: column;
+}
+.dashboard-focus-content > span {
+  margin-bottom: 4px;
+  font-size: 11px;
+  font-weight: 700;
+}
+.dashboard-focus-content strong {
+  font-size: 29px;
+  line-height: 1.1;
+}
+.dashboard-focus-content p {
+  margin: 8px 0 0;
+  color: #3de2bd;
+  font-size: 10px;
+  font-weight: 600;
+}
+/* 作業時間 */
+.dashboard-work-card {
+  padding: 23px 20px;
+}
+.dashboard-work-top {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+.dashboard-work-icon {
+  width: 54px;
+  height: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: #f58dad;
+  color: #321c2b;
+  font-size: 25px;
+}
+.dashboard-work-top > div:last-child {
+  display: flex;
+  flex-direction: column;
+}
+.dashboard-work-top span {
+  font-size: 11px;
+  font-weight: 700;
+}
+.dashboard-work-top strong {
+  margin-top: 5px;
+  font-size: 28px;
+  line-height: 1;
+}
+.dashboard-progress-row {
+  margin-top: 15px;
+  margin-left: 72px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+.dashboard-progress {
+  height: 7px;
+  flex: 1;
+  overflow: hidden;
+  border-radius: 999px;
+  background: #3a4256;
+}
+.dashboard-progress-value {
+  width: 62%;
+  height: 100%;
+  border-radius: inherit;
+  background:
+    linear-gradient(
+      90deg,
+      #f083a6,
+      #f3a4bb
+    );
+}
+.dashboard-progress-row > span {
+  color: #aab0c0;
+  font-size: 8px;
+}
+/* 保留通知 */
+.dashboard-notification-card {
+  padding: 22px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.dashboard-notification-icon {
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: #ffc46e;
+  color: #573c16;
+  font-size: 27px;
+}
+.dashboard-notification-card > div:nth-child(2) {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.dashboard-notification-card span {
+  font-size: 11px;
+  font-weight: 700;
+}
+.dashboard-notification-card strong {
+  margin-top: 5px;
+  font-size: 29px;
+  line-height: 1;
+}
+.dashboard-notification-card p {
+  margin: 7px 0 0;
+  color: #adb2c2;
+  font-size: 9px;
+}
+.dashboard-arrow-button {
+  width: 31px;
+  height: 31px;
+  border: 0;
+  border-radius: 50%;
+  background: #283147;
+  color: #ef9fc5;
+  font-size: 25px;
+  cursor: pointer;
+}
+/* 共通セクションヘッダー */
+.dashboard-section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+.dashboard-section-header h2 {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+}
+.dashboard-section-header h2 > span {
+  color: #db8dff;
+  font-size: 17px;
+}
+/* 今日の作業リズム */
+.dashboard-rhythm-card {
+  height: 221px;
+  margin-bottom: 15px;
+  padding: 17px 20px;
+}
+.dashboard-day-button {
+  min-width: 72px;
+  padding: 7px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 13px;
+  border: 1px solid #3c465b;
+  border-radius: 18px;
+  background: #202a3f;
+  color: #ffffff;
+  font-size: 10px;
+  cursor: pointer;
+}
+.dashboard-rhythm-content {
+  height: 160px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 210px;
+  gap: 20px;
+}
+.dashboard-chart-wrapper {
+  padding-top: 15px;
+  display: grid;
+  grid-template-columns: 48px minmax(0, 1fr);
+}
+.dashboard-chart-y {
+  padding-top: 3px;
+  color: #8690a7;
+  font-size: 8px;
+}
+.dashboard-chart-y > span {
+  display: block;
+  margin-bottom: 14px;
+}
+.dashboard-y-labels {
+  height: 81px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: right;
+  padding-right: 10px;
+}
+.dashboard-chart {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.dashboard-chart-bars {
+  height: 113px;
+  padding: 0 4px;
+  display: flex;
+  align-items: flex-end;
+  gap: 4px;
+  border-bottom: 1px solid #4b566c;
+  background:
+    repeating-linear-gradient(
+      to bottom,
+      transparent,
+      transparent 36px,
+      rgba(255, 255, 255, 0.025) 37px
+    );
+}
+.dashboard-bar {
+  min-width: 3px;
+  flex: 1;
+  border: 1px solid rgba(242, 150, 190, 0.55);
+  border-radius: 3px 3px 0 0;
+  background:
+    linear-gradient(
+      180deg,
+      #e88cae 0%,
+      #c68dc9 48%,
+      #6e9fda 100%
+    );
+  box-shadow:
+    0 0 8px rgba(221, 128, 177, 0.1);
+}
+.dashboard-chart-labels {
+  margin-top: 5px;
+  display: flex;
+  justify-content: space-between;
+  color: #8b94a9;
+  font-size: 7px;
+}
+/* グラフ右側の説明 */
+.dashboard-rhythm-message {
+  margin-top: 15px;
+  padding: 0 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 1px solid #3b455c;
+  border-radius: 12px;
+  background:
+    linear-gradient(
+      135deg,
+      #283149,
+      #252d42
+    );
+}
+.dashboard-rhythm-message strong {
+  margin-bottom: 10px;
+  font-size: 12px;
+}
+.dashboard-rhythm-message p {
+  margin: 0;
+  color: #b2b7c6;
+  font-size: 9px;
+  line-height: 1.8;
+}
+/* 下部3カード */
+.dashboard-bottom-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1.2fr 1.08fr;
+  gap: 13px;
+}
+.dashboard-bottom-grid > .dashboard-card {
+  height: 400px;
+  padding: 20px;
+}
+/* 最近の介入履歴 */
+.dashboard-text-button {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #e59dca;
+  font-size: 8px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.dashboard-history-list {
+  margin-top: 19px;
+  display: flex;
+  flex-direction: column;
+}
+.dashboard-history-item {
+  min-height: 45px;
+  position: relative;
+  display: grid;
+  grid-template-columns: 10px 38px 1fr;
+  gap: 7px;
+  align-items: start;
+}
+/* 履歴同士をつなぐ縦線 */
+.dashboard-history-item:not(:last-child)::after {
+  content: "";
+  width: 1px;
+  height: 35px;
+  position: absolute;
+  top: 11px;
+  left: 3px;
+  background: #3b465d;
+}
+.dashboard-history-dot {
+  width: 7px;
+  height: 7px;
+  margin-top: 3px;
+  position: relative;
+  z-index: 2;
+  border-radius: 50%;
+}
+.dashboard-history-dot.blue {
+  background: #67a9ee;
+}
+.dashboard-history-dot.green {
+  background: #4ad8bf;
+}
+.dashboard-history-dot.pink {
+  background: #ef85ad;
+}
+.dashboard-history-dot.yellow {
+  background: #ffc96e;
+}
+.dashboard-history-time {
+  color: #c0c6d4;
+  font-size: 8px;
+}
+.dashboard-history-item strong {
+  display: block;
+  font-size: 9px;
+}
+.dashboard-history-item p {
+  margin: 3px 0 0;
+  color: #838ca2;
+  font-size: 7px;
+}
+/* AI判断理由 */
+.dashboard-ai-card {
+  background:
+    linear-gradient(
+      135deg,
+      #222b41,
+      #292d50
+    );
+}
+.dashboard-detail-button {
+  padding: 6px 10px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  border: 1px solid #414b60;
+  border-radius: 15px;
+  background: #293146;
+  color: #ffffff;
+  font-size: 8px;
+  cursor: pointer;
+}
+.dashboard-ai-description {
+  margin: 19px 0 16px;
+  max-width: 330px;
+  color: #d3d6df;
+  font-size: 9px;
+  line-height: 1.8;
+}
+.dashboard-ai-reasons {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.dashboard-ai-reason {
+  min-height: 30px;
+  padding: 6px 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.055);
+}
+.dashboard-ai-reason > span {
+  width: 17px;
+  height: 17px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: #42d9bd;
+  color: #173a38;
+  font-size: 10px;
+  font-weight: 900;
+}
+.dashboard-ai-reason p {
+  margin: 0;
+  color: #bdc3d2;
+  font-size: 8px;
+}
+.dashboard-ai-detail {
+  margin-top: 12px;
+  padding: 10px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.05);
+  color: #b8becd;
+  font-size: 8px;
+  line-height: 1.7;
+}
+/* 接続一覧 */
+.dashboard-connections-list {
+  margin-top: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+.dashboard-connection-item {
+  min-height: 35px;
+  padding: 6px 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid #3a445b;
+  border-radius: 9px;
+  background: rgba(255, 255, 255, 0.035);
+}
+.dashboard-device-icon {
+  width: 25px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border-radius: 7px;
+  background: #353c5b;
+  color: #d39dff;
+  font-size: 11px;
+}
+.dashboard-connection-item strong {
+  flex: 1;
+  font-size: 8px;
+}
+.dashboard-device-status {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: #aeb5c5;
+  font-size: 7px;
+}
+.dashboard-device-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #707789;
+}
+.dashboard-device-dot.connected {
+  background: #43e1c0;
+  box-shadow:
+    0 0 7px rgba(67, 225, 192, 0.7);
+}
+/* 小さい画面用 */
+@media (max-width: 1200px) {
+  .dashboard-main {
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+  .dashboard-bottom-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .dashboard-connections-card {
+    grid-column: span 2;
+  }
+}
+@media (max-width: 900px) {
+  .dashboard-top-grid {
+    grid-template-columns: 1fr;
+  }
+  .dashboard-rhythm-content {
+    grid-template-columns: 1fr;
+  }
+  .dashboard-rhythm-message {
+    display: none;
+  }
+  .dashboard-bottom-grid {
+    grid-template-columns: 1fr;
+  }
+  .dashboard-connections-card {
+    grid-column: auto;
+  }
+}
